@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-charcoal: #101315;
+    --color-graphite: #191D20;
+    --color-warm-white: #F3F1EB;
+    --color-bronze: #C49A62;
+    --color-cool-gray: #A7ACAE;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: #101315;
+    color: #F3F1EB;
+    font-family: 'Inter', system-ui, sans-serif;
+    overflow-x: hidden;
+  }
+
+  body {
+    background-color: #101315;
+    color: #F3F1EB;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+  }
+
+  /* Accessible visible focus states */
+  :focus-visible {
+    outline: 2px solid #C49A62;
+    outline-offset: 2px;
+  }
+
+  /* Optimized touch manipulation */
+  @media (pointer: coarse) {
+    button, a, input, select, textarea {
+      touch-action: manipulation;
+    }
+  }
+
+  #root {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+  }
+
+  /* Custom subtle scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #101315;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #282E33;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #C49A62;
+  }
+
+  /* Selection styling */
+  ::selection {
+    background-color: #C49A62;
+    color: #101315;
+  }
+}
+
+@layer utilities {
+  /* Architectural drafting grid */
+  .bg-cad-grid {
+    background-image: 
+      linear-gradient(to right, rgba(243, 241, 235, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(243, 241, 235, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  .bg-cad-dots {
+    background-image: radial-gradient(rgba(196, 154, 98, 0.12) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  /* Technical hairline border */
+  .border-hairline {
+    border-color: rgba(255, 255, 255, 0.08);
+  }
+
+  .border-hairline-bronze {
+    border-color: rgba(196, 154, 98, 0.25);
+  }
+
+  /* Engineering crosshair indicator */
+  .crosshair-corner {
+    position: relative;
+  }
+  .crosshair-corner::before,
+  .crosshair-corner::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-color: #C49A62;
+    pointer-events: none;
+    opacity: 0.6;
+  }
+
+  /* Clip paths for cinematic reveals */
+  .clip-reveal {
+    clip-path: polygon(0 0, 100 0, 100% 100%, 0 100%);
+  }
+
+  /* Smooth GPU accelerated transitions */
+  .gpu-layer {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+  }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <rect width="64" height="64" rx="12" fill="#101315" />
+  <rect x="2" y="2" width="60" height="60" rx="10" stroke="#C49A62" stroke-opacity="0.3" stroke-width="1.5" />
+  <!-- Architectural Pillar / Column Frame (Stambha) -->
+  <path d="M16 16 H48 V21 H16 Z" fill="#C49A62" />
+  <path d="M22 21 V45 M32 21 V45 M42 21 V45" stroke="#F3F1EB" stroke-width="3" stroke-linecap="round" />
+  <path d="M22 23 L42 43 M42 23 L22 43" stroke="#C49A62" stroke-width="1.5" stroke-opacity="0.5" />
+  <path d="M16 45 H48 V50 H16 Z" fill="#C49A62" />
+</svg>
